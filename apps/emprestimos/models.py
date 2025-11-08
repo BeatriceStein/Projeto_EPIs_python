@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from apps.colaboradores.models import Colaborador
-from epi.models import EPI
+from apps.epi.models import EPI
 from django.utils import timezone
 
 class Emprestimo(models.Model):

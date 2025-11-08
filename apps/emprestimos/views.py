@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django import forms
 from .models import Emprestimo
 from apps.colaboradores.models import Colaborador
-from epi.models import EPI
+from apps.epi.models import EPI
 from django.utils import timezone
 from django.contrib import messages
 

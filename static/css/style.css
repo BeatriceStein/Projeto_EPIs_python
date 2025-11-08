@@ -165,6 +165,89 @@ a:hover {
     display: block;
 }
 
+/* Labels */
+label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #0a320f; /* verde escuro suave */
+    font-size: 15px;
+}
+
+/* Campos de entrada (input, select, textarea) */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="password"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #bcd3b8; /* verde claro nas bordas */
+    border-radius: 6px;
+    font-size: 15px;
+    color: #222;
+    background-color: #f9fff8; /* fundo levemente esverdeado */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Efeito ao focar */
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #0a962d; /* verde principal */
+    box-shadow: 0 0 4px rgba(10, 150, 45, 0.4);
+    outline: none;
+}
+
+/* Ajuste para botão enviar, se quiser manter o estilo coerente */
+input[type="submit"], button {
+    background-color: #0a962d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #087a25;
+    transform: scale(1.03);
+}
+
+/* Estilo geral dos botões */
+.btn, input[type="submit"] {
+    background-color: #0a962d;
+    color: #ffffff;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    margin: 5px;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+/* Efeito hover */
+.btn:hover, input[type="submit"]:hover {
+    background-color: #087526;
+    transform: scale(1.03);
+}
+
+/* Botão cancelar */
+.btn-cancelar {
+    background-color: #999999; /* cinza */
+    color: #ffffff;
+}
+
+.btn-cancelar:hover {
+    background-color: #666666;
+}
+
 /* Responsivo */
 @media (max-width: 700px) {
     .content {

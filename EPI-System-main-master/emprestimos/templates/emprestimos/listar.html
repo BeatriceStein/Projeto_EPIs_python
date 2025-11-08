@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Empréstimos de EPIs{% endblock %}
+{% block content %}
+<h2>Empréstimos de EPIs</h2>
+<a href="{% url 'criar_emprestimo' %}"><button>+ Novo Empréstimo</button></a>
+<table>
+    <tr>
+        <th>Colaborador</th>
+        <th>EPI</th>
+        <th>Qtd</th>
+        <th>Data</th>
+        <th>Previsão Devolução</th>
+        <th>Devolvido?</th>
+        <th>Ação</th>
+    </tr>
+    {% for e in emprestimos %}
+    <tr>
+        <td>{{ e.colaborador.nome }}</td>
+        <td>{{ e.epi.nome }}</td>
+        <td>{{ e.quantidade }}</td>
+        <td>{{ e.data_emprestimo|date:"d/m/Y H:i" }}</td>
+        <td>{{ e.previsao_devolucao|date:"d/m/Y" }}</td>
+        <td>{{ e.devolvido|yesno:"Sim,Não" }}</td>
+        <td>
+            {% if not e.devolvido %}
+                <a href="{% url 'devolver_epi' e.id %}">♻️ Devolver</a>
+            {% else %}
+                ✅ Devolvido
+            {% endif %}
+        </td>
+    </tr>
+    {% empty %}
+    <tr><td colspan="7">Nenhum empréstimo registrado.</td></tr>
+    {% endfor %}
+</table>
+{% endblock %}

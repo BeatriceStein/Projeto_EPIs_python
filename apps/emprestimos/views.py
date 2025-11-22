@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required
 from django import forms
 from .models import Emprestimo
+from .forms import EmprestimoForm
 from apps.colaboradores.models import Colaborador
 from apps.epi.models import EPI
 from django.utils import timezone

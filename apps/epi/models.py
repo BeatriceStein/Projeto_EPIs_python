@@ -3,11 +3,12 @@ from django.utils import timezone
 
 class EPI(models.Model):
     CATEGORIAS = [
-        ('capacete', 'Capacete'),
-        ('luva', 'Luva'),
-        ('caneleira', 'Caneleira'),
-        ('bota', 'Bota'),
-        ('mascara', 'Máscara'),
+        ('proteção da cabeça', 'Proteção da Cabeça'),
+        ('proteção auditiva','Proteção Auditiva'),
+        ('proteção ocular e facial', 'Proteção Ocular e Facial'),
+        ('proteção mãos e braços', 'Proteção mãos e braços'),
+        ('boproteção pernas e pés', 'Proteção pernas e pés'),
+        ('proteção respiratória', 'Proteção Respiratória'),
         ('outro', 'Outro'),
     ]
 
